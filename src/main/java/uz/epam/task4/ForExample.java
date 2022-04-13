@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
-public class Main {
+public class ForExample {
     public static void main(String[] args) throws IOException {
         FileCreator fileCreator = new FileCreator();
         File file = fileCreator.getFile("ball.txt");
