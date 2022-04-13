@@ -18,9 +18,9 @@ public class ForExample {
         File file = fileCreator.getFile("ball.txt");
         DataReader dataReader = new DataReader(file);
         try {
-            List<String> list = dataReader.extractText();
+            List<String> list = dataReader.extractLines();
             CardCreator cardCreator = new CardCreator();
-            Card card = cardCreator.createBallsFromList(list);
+            Card card = cardCreator.makeCard(list);
             CardService cardService = new CardService(card);
             System.out.println(cardService.getQuantityByColor(Color.BLACK));
         } catch (FileNotFoundException e) {

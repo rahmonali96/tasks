@@ -22,7 +22,6 @@ public class FileCreator {
         Stream<Path> pathStream = Files.list(path);
         File file;
         try{
-
             file = pathStream.filter(path -> path.equals(path1))
                     .findFirst().orElseThrow()
                     .toFile();

@@ -24,13 +24,13 @@ public class DataReader {
         this.file = file;
     }
 
-    public List<String> extractText() throws FileNotFoundException {
+    public List<String> extractLines() throws FileNotFoundException {
         Scanner scanner = new Scanner(file);
-        List<String> balls = new ArrayList<>();
+        List<String> lines = new ArrayList<>();
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
-            balls.add(line);
+            lines.add(line);
         }
-        return balls;
+        return lines;
     }
 }
