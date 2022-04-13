@@ -2,10 +2,10 @@ package uz.epam.task4;
 
 import uz.epam.task4.model.Card;
 import uz.epam.task4.model.Color;
-import uz.epam.task4.service.CardCreator;
+import uz.epam.task4.util.CardCreator;
 import uz.epam.task4.service.CardService;
-import uz.epam.task4.service.DataReader;
-import uz.epam.task4.service.FileCreator;
+import uz.epam.task4.util.DataReader;
+import uz.epam.task4.util.FileCreator;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,9 +1,10 @@
-package uz.epam.task4.service;
+package uz.epam.task4.util;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.stream.Stream;
 
 public class FileCreator {
     private final Path path;
@@ -18,9 +19,17 @@ public class FileCreator {
 
     public File getFile(String name) throws IOException {
         Path path1 = path.resolve(name);
-        return Files.list(path)
-                .filter(path -> path.equals(path1))
-                .findFirst().orElseThrow()
-                .toFile();
+        Stream<Path> pathStream = Files.list(path);
+        File file;
+        try{
+
+            file = pathStream.filter(path -> path.equals(path1))
+                    .findFirst().orElseThrow()
+                    .toFile();
+        }finally {
+            pathStream.close();
+        }
+        return file;
+
     }
 }
