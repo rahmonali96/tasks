@@ -13,9 +13,9 @@ public class FileCreator {
         this.path = Path.of("C:\\Users\\user\\Desktop\\Projects\\tasks\\src\\main\\resources");
     }
 
-    public File createFile(String name) throws IOException {
-        return Files.createFile(path.resolve(name)).toFile();
-    }
+//    public File createFile(String name) throws IOException {
+//        return Files.createFile(path.resolve(name)).toFile();
+//    }
 
     public File getFile(String name) throws IOException {
         Path path1 = path.resolve(name);
