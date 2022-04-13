@@ -3,7 +3,7 @@ package uz.epam.task4.model;
 import java.util.Random;
 
 public enum Color {
-    BLACK,WHITE,GREY;
+    BLACK,WHITE,BLUE;
 
     public static Color getRandom() {
         Color[] color = Color.values();

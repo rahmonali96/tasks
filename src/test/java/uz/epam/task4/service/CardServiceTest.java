@@ -22,6 +22,9 @@ public class CardServiceTest {
         balls.add(new Ball(Color.BLACK, 5));
         balls.add(new Ball(Color.WHITE, 6));
         balls.add(new Ball(Color.BLACK, 7));
+        balls.add(new Ball(Color.BLUE, 8));
+        balls.add(new Ball(Color.WHITE, 9));
+        balls.add(new Ball(Color.BLACK, 10));
         card.setBalls(balls);
         cardService = new CardService(card);
     }
@@ -29,13 +32,13 @@ public class CardServiceTest {
     @Test
     public void testGetWeightByColor() {
         double actual = cardService.getWeightByColor(Color.BLACK);
-        double expected = 12;
+        double expected = 22;
         assertEquals(actual, expected);
     }
 
     @Test
     public void testGetQuantityByColor() {
-        long actual = cardService.getQuantityByColor(Color.BLACK);
+        long actual = cardService.getQuantityByColor(Color.WHITE);
         long expected = 2;
         assertEquals(actual, expected);
 
