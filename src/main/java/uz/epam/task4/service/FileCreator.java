@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.function.Predicate;
 
 public class FileCreator {
     private final Path path;
@@ -20,6 +18,9 @@ public class FileCreator {
 
     public File getFile(String name) throws IOException {
         Path path1 = path.resolve(name);
-        return Files.list(path).filter(path -> path.equals(path1)).findFirst().orElseThrow().toFile();
+        return Files.list(path)
+                .filter(path -> path.equals(path1))
+                .findFirst().orElseThrow()
+                .toFile();
     }
 }
